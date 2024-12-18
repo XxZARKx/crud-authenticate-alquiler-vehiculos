@@ -1,9 +1,20 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 import models, schemas
+from sqlalchemy.orm import Session
 from database import get_db
-
+from models import UsuarioBase
+from ..dependency.dependencies import get_user_validator
 router = APIRouter()
+
+# @router.get("/", response_model=list[UsuarioBase])
+# def read_empleados(
+#     skip: int = 0,
+#     limit: int = 10,
+#     db: Session = Depends(get_db),
+#     current_user: UsuarioBase = Depends(get_user_validator(1))
+# ):
+#     return db.query(UsuarioBase).filter(UsuarioBase.tipo == 1).offset(skip).limit(limit).all()
 
 # Crear un nuevo empleado (tipo = 1)
 @router.post("/", response_model=schemas.Usuario)

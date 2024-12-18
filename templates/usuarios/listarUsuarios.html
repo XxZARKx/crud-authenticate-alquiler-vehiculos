@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Lista de Usuarios</title>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
-			integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-		<link rel="stylesheet" href="/static/styles.css" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-	</head>
-	<body>
-		<header id="headerRegister">
-			<nav>
-				<ul>
-					<li><a href="/enlaces">CRUD disponibles</a></li>
-				</ul>
-			</nav>
-		</header>
-		<main>
-			<h1>Registrados</h1>
-			<table id="usersTable">
-				<thead>
-					<tr>
-						<th>ID</th>
-						<th>Nombres y Apellidos</th>
-						<th>Correo</th>
-						<th>DNI</th>
-						<th>Acciones</th>
-					</tr>
-				</thead>
-				<tbody></tbody>
-			</table>
-		</main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Usuarios</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+      integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <header id="headerRegister">
+      <nav>
+        <ul></ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Registrados</h1>
+      <table id="usersTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombres y Apellidos</th>
+            <th>Correo</th>
+            <th>DNI</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </main>
 
-		<script type="module" src="../static/apiUrl.js"></script>
-		<script type="module" src="../static/main.js"></script>
-	</body>
+    <script type="module" src="../static/apiUrl.js"></script>
+    <script type="module" src="../static/main.js"></script>
+  </body>
 </html>

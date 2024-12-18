@@ -2,8 +2,19 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 import models, schemas
 from database import get_db
-
+from models import UsuarioBase
+from ..dependency.dependencies import get_user_validator
 router = APIRouter()
+
+
+# @router.get("/", response_model=list[UsuarioBase])
+# def read_clientes(
+#     skip: int = 0,
+#     limit: int = 10,
+#     db: Session = Depends(get_db),
+#     current_user: UsuarioBase = Depends(get_user_validator(2))  # Solo tipo 2
+# ):
+#     return db.query(UsuarioBase).filter(UsuarioBase.tipo == 2).offset(skip).limit(limit).all()
 
 # Crear un nuevo cliente (tipo = 2)
 @router.post("/", response_model=schemas.Usuario)

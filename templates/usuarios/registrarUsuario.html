@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Registrar</title>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-		<link rel="stylesheet" href="/static/styles.css" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-	</head>
-	<body>
-		<header id="headerRegister">
-			<nav>
-				<ul>
-					<li><a href="/enlaces">Crud Disponibles</a></li>
-				</ul>
-			</nav>
-		</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrar</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <header id="headerRegister">
+      <nav>
+        <ul></ul>
+      </nav>
+    </header>
 
-		<main>
-			<h1 id="formTitle">Registrar</h1>
-			<form id="registerForm">
-				<label for="nombre">Nombres y Apellidos:</label>
-				<input type="text" id="nombre" name="nombre" required /><br />
+    <main>
+      <h1 id="formTitle">Registrar</h1>
+      <form id="registerForm">
+        <label for="nombre">Nombres y Apellidos:</label>
+        <input type="text" id="nombre" name="nombre" required /><br />
 
-				<label for="correo">Correo:</label>
-				<input type="email" id="correo" name="correo" required /><br />
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required /><br />
 
-				<div class="passwordContainer">
-					<label for="contraseña">Contraseña:</label>
-					<input type="password" id="contraseña" name="contraseña" required />
-					<i id="toggle-password" class="fas fa-eye toggle-icon"></i>
-				</div>
+        <div class="passwordContainer">
+          <label for="contraseña">Contraseña:</label>
+          <input type="password" id="contraseña" name="contraseña" required />
+          <i id="toggle-password" class="fas fa-eye toggle-icon"></i>
+        </div>
 
-				<label for="dni">DNI:</label>
-				<input type="number" id="dni" name="dni" required /><br />
+        <label for="dni">DNI:</label>
+        <input type="number" id="dni" name="dni" required /><br />
 
-				<button class="btnRegistrar" type="submit">Registrar</button>
-			</form>
-		</main>
+        <button class="btnRegistrar" type="submit">Registrar</button>
+      </form>
+    </main>
 
-		<script type="module" src="/static/postUsuario.js"></script>
-		<script src="/static/tooglePasswordVisibility.js"></script>
-	</body>
+    <script type="module" src="/static/postUsuario.js"></script>
+    <script src="/static/tooglePasswordVisibility.js"></script>
+  </body>
 </html>

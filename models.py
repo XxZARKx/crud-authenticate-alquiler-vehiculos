@@ -1,6 +1,8 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
 from database import Base
 from sqlalchemy.orm import relationship
+from pydantic import BaseModel
+from typing import Optional, List
 
 
 class Vehiculo(Base):
@@ -13,6 +15,17 @@ class Vehiculo(Base):
     matricula = Column(String(30), nullable=False)
     estado = Column(String(20), nullable=False)
 
+
+class VehiculoBase(BaseModel):
+    id: int
+    marca: str
+    modelo: str
+    placa: str
+    matricula: str
+    estado: str
+
+    class Config:
+        orm_mode = True  
 
 class RolUsuario(Base):
     __tablename__ = "rol_usuario"
@@ -36,3 +49,21 @@ class Usuario(Base):
 
     # Relación con RolUsuario
     tipo_rol = relationship("RolUsuario", back_populates="usuarios")
+
+
+class RolUsuarioBase(BaseModel):
+    id: int
+    tipo: str
+
+    class Config:
+        orm_mode = True
+
+class UsuarioBase(BaseModel):
+    id: int
+    nombre: str
+    correo: str
+    dni: Optional[int]
+    tipo: int  # ID del rol
+
+    class Config:
+        orm_mode = True

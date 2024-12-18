@@ -2,8 +2,16 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 import models, schemas
 from database import get_db
+from models import Usuario
 
 router = APIRouter()
+
+@router.post("/login")
+def login(username: str, password: str, db: Session = Depends(get_db)):
+    user = db.query(Usuario).filter(Usuario.username == username, Usuario.password == password).first()
+    if not user:
+        raise HTTPException(status_code=400, detail="Credenciales incorrectas")
+    return {"user_id": user.id, "tipo": user.tipo}
 
 @router.post("/", response_model=schemas.Usuario)
 def create_usuario(usuario: schemas.UsuarioCreate, db: Session = Depends(get_db)):

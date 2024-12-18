@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-		<title>CRUD Vehículos</title>
-		<link rel="stylesheet" href="../static/styles.css" />
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>CRUD Vehículos</title>
+    <link rel="stylesheet" href="../static/styles.css" />
+  </head>
 
-	<body>
-		<header>
-			<nav>
-				<ul>
-					<li><a href="/vehicles/register">Registrar Vehículo</a></li>
-					<li><a href="/vehicles/list">Lista de Vehículos</a></li>
-					<li><a href="/enlaces">CRUD disponibles</a></li>
-				</ul>
-			</nav>
-		</header>
-		<main>
-			<h1>Vehículos Registrados</h1>
-			<table id="vehiclesTable">
-				<thead>
-					<tr>
-						<th>ID</th>
-						<th>Marca</th>
-						<th>Modelo</th>
-						<th>Placa</th>
-						<th>Matrícula</th>
-						<th>Estado</th>
-						<th>Acciones</th>
-					</tr>
-				</thead>
-				<tbody></tbody>
-			</table>
-		</main>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/vehicles/register">Registrar Vehículo</a></li>
+          <li><a href="/vehicles/list">Lista de Vehículos</a></li>
+          <li><a href="/enlaces">CRUD disponibles</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Vehículos Registrados</h1>
+      <table id="vehiclesTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Placa</th>
+            <th>Matrícula</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </main>
 
-		<script type="module" src="../static/getYDeleteVehiculo.js"></script>
-	</body>
+    <script type="module" src="../static/getYDeleteVehiculo.js"></script>
+  </body>
 </html>
